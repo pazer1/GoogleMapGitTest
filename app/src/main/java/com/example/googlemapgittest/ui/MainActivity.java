@@ -116,6 +116,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void navChatroomActivity(Chatroom chatroom){
         Intent intent = new Intent(MainActivity.this, ChatroomActivity.class);
         intent.putExtra(getString(R.string.intent_chatroom),chatroom);
+        startActivity(intent);
     }
     private void showDialog(){
         mProgressBar.setVisibility(View.VISIBLE);
