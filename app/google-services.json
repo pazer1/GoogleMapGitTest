@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "550841716834",
+    "firebase_url": "https://mapgittest.firebaseio.com",
+    "project_id": "mapgittest",
+    "storage_bucket": "mapgittest.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:550841716834:android:2deeb916a1d893e7",
+        "android_client_info": {
+          "package_name": "com.example.googlemapgittest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "550841716834-v84cfct1ouii0153aps7bqmu9b6q1k63.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgduv7GwfHG7srH1iuitKrO5R3ZL22ZqI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

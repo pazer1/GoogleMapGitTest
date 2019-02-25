@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">GoogleMapGitTest</string>
+    <string name="collection_chatrooms">Chatrooms</string>
+    <string name="intent_chatroom">intent_chatroom</string>
 </resources>
