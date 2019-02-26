@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.EditText;
 
 import com.example.googlemapgittest.R;
+import com.example.googlemapgittest.UserClient;
 import com.example.googlemapgittest.models.Chatroom;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
@@ -50,7 +51,7 @@ public class ChatroomActivity extends AppCompatActivity implements View.OnClickL
                 .collection(getString(R.string.collection_chatroom_user_list))
                 .document(FirebaseAuth.getInstance().getUid());
 
-
+        User user = ((UserClient)(getApplicationContext())).getUser();
     }
 
     private void setChatroomName(){
