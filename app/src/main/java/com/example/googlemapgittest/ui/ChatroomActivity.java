@@ -9,10 +9,10 @@ import android.widget.EditText;
 import com.example.googlemapgittest.R;
 import com.example.googlemapgittest.UserClient;
 import com.example.googlemapgittest.models.Chatroom;
+import com.example.googlemapgittest.models.User;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.auth.User;
 
 public class ChatroomActivity extends AppCompatActivity implements View.OnClickListener{
 
