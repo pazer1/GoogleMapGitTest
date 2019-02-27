@@ -56,6 +56,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                             .build();
                     db.setFirestoreSettings(setting);
 
+
                     DocumentReference userRef = db.collection(getString(R.string.collection_users))
                             .document(user.getUid());
 
