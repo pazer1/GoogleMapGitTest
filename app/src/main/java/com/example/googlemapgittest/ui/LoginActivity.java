@@ -7,12 +7,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ProgressBar;
-import android.widget.Toast;
 
 import com.example.googlemapgittest.R;
-import com.example.googlemapgittest.models.User;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
@@ -56,7 +52,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                             .build();
                     db.setFirestoreSettings(setting);
 
-
                     DocumentReference userRef = db.collection(getString(R.string.collection_users))
                             .document(user.getUid());
 
@@ -65,10 +60,18 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                         public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                             if(task.isSuccessful()){
                                 Log.d(TAG, "onComplete: successfully set the user client.");
-                                User user = task.getResult().toObject(User.class); 
+                                User user = task.getResult().toObject(User.class);
+                                ((UserClient)(getApplicationContext())).setUser(user);
                             }
                         }
                     });
+
+                    Intent intent = new Intent(LoginActivity.this,MainActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    startActivity(intent);
+                    finish();
+                }else{
+                    Log.d(TAG,"onAuthStateChanged:singed_out");
                 }
             }
         };
