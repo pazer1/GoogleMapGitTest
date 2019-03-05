@@ -16,6 +16,8 @@ public class UserRecyclerAdapter extends RecyclerView.Adapter<UserRecyclerAdapte
 
     private ArrayList<User>mUsers = new ArrayList<>();
 
+    public UserRecyclerAdapter(ArrayList<User> users){this.mUsers = users;}
+
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {

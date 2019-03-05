@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -34,6 +35,7 @@ public class UserListFragment extends Fragment {
         super.onCreate(savedInstanceState);
         if(getArguments() != null){
             mUserList = getArguments().getParcelableArrayList("intent_user_list");
+
         }
     }
 
@@ -49,5 +51,8 @@ public class UserListFragment extends Fragment {
 
     private void initUserListRecyclerView(){
         //TODO:여기도
+        mUserRecyclerAdapter = new UserRecyclerAdapter(mUserList);
+        mUserLIstRecyclerView.setAdapter(mUserRecyclerAdapter);
+        mUserLIstRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
     }
 }

@@ -140,6 +140,15 @@ public class ChatroomActivity extends AppCompatActivity implements View.OnClickL
     private void insertNewMessage(){
         //TODO 여기부터
         String message = mMessage.getText().toString();
+
+        if(!message.equals("")){
+            message = message.replaceAll(System.getProperty("line.separator"),"");
+
+            DocumentReference newMessageDoc = mDb.collection("Chatrooms").document(mChatroom.getChatroom_id())
+                    .collection("Chat Messages").document();
+
+            
+        }
     }
 
 
